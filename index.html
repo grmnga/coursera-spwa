@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" ng-app="myFirstApp">
   <head>
     <meta charset="utf-8">
     <title>Hello Coursera Student</title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </head>
   <body>
-    <h1>Hello Coursera Student</h1>
+    <div ng-controller="MyFirstController">
+      <input type="text"
+      ng-model="name"
+      ng-keyup="displayNumeric();">
+      <div>
+        {{sayHello()}}
+      </div>
+      <div>
+        Inside my input is: {{name}}
+      </div>
+      <div>
+        Total Numeric value of person's name is:
+        {{totalValue}}
+      </div>
+    </div>
   </body>
 </html>
