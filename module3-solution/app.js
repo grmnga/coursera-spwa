@@ -29,6 +29,10 @@
         }).then(function (result) {
           var foundItems = [];
 
+          if (searchTerm == '') {
+            return foundItems;
+          }
+
           var menuItems = result.data['menu_items'];
           for ( var i = 0; i < menuItems.length; i++ ) {
             var name = menuItems[i]['name'].toLowerCase();
