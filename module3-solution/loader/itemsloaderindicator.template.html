@@ -3,6 +3,6 @@
 <ul>
   <li ng-repeat="item in foundItems">
     <button ng-click="onRemove({index: $index});" class="btn btn-primary btn-sm">Don't want this one!</button>
-    {{$index + 1}}. {{item.name}}
+    {{$index + 1}}. {{item.name}} : {{item.short_name}} : {{item.description}}
   </li>
 </ul>
