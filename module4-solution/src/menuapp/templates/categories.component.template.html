@@ -1,0 +1,7 @@
+<ul class="list-group">
+  <li ng-repeat="item in $ctrl.items">
+    <a  ui-sref="items({itemShortName: item.short_name})"  class="list-group-item list-group-item-action">
+      {{ $index + 1 }}.  {{ item.name }} ({{ item.short_name }})
+    </a>
+  </li>
+</ul>
