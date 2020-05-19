@@ -1,6 +1,6 @@
 <ul>
   <li ng-repeat="item in $ctrl.itemslist" class="item">
-    <h4 class='item-name'>{{ $index + 1 }}. {{ item.name}}</h4>
+    <h4 class='item-name'>{{ $index + 1 }}. {{ item.name}} - ${{ item.price_large }}</h4>
     <p class='item-description'>{{ item.description }}</p>
   </li>
 </ul>
