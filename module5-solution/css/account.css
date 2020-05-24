@@ -1,0 +1,39 @@
+form {
+  width: 500px;
+  margin: auto;
+}
+
+.ng-touched.ng-valid {
+  border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
+}
+
+input {
+  margin: 10px 0;
+}
+
+form button.btn {
+  width: 50%;
+  display: block;
+  box-sizing: border-box;
+  margin: 20px auto;
+}
+
+.myinfo {
+  width: 500px;
+  margin: auto;
+}
+
+.col p {
+  font-size: 18px;
+  color: #f6b319;
+}
+
+.col span {
+  font-size: 14px;
+  color: white;
+  font-style: italic;
+}
