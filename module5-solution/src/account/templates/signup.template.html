@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="css/account.css">
+<h4 class="text-center">Hi! Have a nice day and good luck with your studies.</h4>
 <h2 class="text-center">Sign Up</h2>
 <form class="" name='regForm' novalidate>
   <!-- First Name -->
@@ -17,8 +18,8 @@
           ng-model="reg.account.lastName"
           required
           pattern="\S{2,}">
-  <span   ng-if="(regForm.lastName.$error.minlength || regForm.lastName.$error.required) && regForm.lastName.$touched">
-          First name must be at least 2 characters long
+  <span   ng-if="(regForm.firstname.$invalid || regForm.lastName.$error.required) && regForm.lastName.$touched">
+          Last name must be at least 2 characters long
   </span>
 
 <!-- email -->
