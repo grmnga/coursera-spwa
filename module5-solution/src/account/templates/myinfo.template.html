@@ -5,7 +5,7 @@
     <a ui-sref="public.signup" class="text-center">Sugn Up</a> Now!
   </h2>
   <div ng-if="myInfoCtrl.exist" class="row">
-    <h3>My info</h3>
+    <h2 class="text-center">My info</h2>
     <div class="col">
       <p>First name: <span>{{ myInfoCtrl.firstName }}</span></p>
       <p>First name: <span>{{ myInfoCtrl.lastName }}</span></p>
@@ -14,7 +14,7 @@
       <p>First name: <span>{{ myInfoCtrl.phone }}</span></p>
     </div>
     <div class="col">
-      <p>Favorite: <span>{{ myInfoCtrl.favorite.name }}</span></p>
+      <p>Favorite dish: <span>{{ myInfoCtrl.favorite.name }}</span></p>
       <img class="img-responsive" width="250" height="150" ng-src="https://restaurant-server-grmnga.herokuapp.com//images/{{myInfoCtrl.favorite.short_name}}.jpg" alt="{{myInfoCtrl.favorite.name}}">
       <p>Description: <span>{{myInfoCtrl.favorite.description}}</span></p>
     </div>

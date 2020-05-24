@@ -9,20 +9,26 @@
     var reg = this;
     reg.favoriteExist = {}
 
-    reg.submit = function () {
-      var answer;
+    reg.checkDishName = function () {
       AccountDataService.checkDishName(reg.favoriteShortName).then(function (response) {
         if (response == false) {
           reg.favoriteExist = false;
-          return;
         }
         else {
-          reg.favoriteExist = true;
-          reg.account.favorite = response;
-          AccountDataService.addAccountData(reg.account);
-          reg.signup = true;
+          reg.favoriteExist = true;          
+          reg.favorite = response;
         }
-      });
+      })
+    };
+
+    reg.submit = function () {
+      reg.checkDishName();
+      if (reg.favoriteExist = true) {
+        console.log("favorite: ", reg.favorite);
+        reg.account.favorite = reg.favorite;
+        AccountDataService.addAccountData(reg.account);
+        reg.signup = true;
+      }
     }
   }
 })();

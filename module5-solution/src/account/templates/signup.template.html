@@ -51,7 +51,8 @@
   <input type="text" placeholder="Favorite dish short name" class="form-control"
           name="favoriteShortName"
           ng-model="reg.favoriteShortName"
-          required>
+          required
+          ng-blur="reg.checkDishName()">
   <span   ng-if="regForm.favoriteShortName.$error.required && regForm.favoriteShortName.$touched">
           The field cannot be blank. Enter the name of one favorite dish. Example: L1, FR2, DK2 ...
   </span>
