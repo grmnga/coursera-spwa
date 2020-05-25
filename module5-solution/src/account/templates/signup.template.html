@@ -55,17 +55,15 @@
           required
           ng-blur="reg.checkDishName()">
   <span   ng-if="regForm.favoriteShortName.$error.required && regForm.favoriteShortName.$touched">
-          The field cannot be blank. Enter the name of one favorite dish. Example: L1, FR2, DK2 ...
+          The field cannot be blank. Enter the name of one favorite dish.
   </span>
-  <p ng-if="reg.favoriteExist == false">No such menu number exists. Try another dish.</p>
+  <p ng-if="reg.favoriteExist == false">No such menu number exists. Try another dish. Example: L1, FR2, DK2 ...</p>
 
   <button  class="btn btn-primary"
-          ng-disabled="regForm.$invalid"
+          ng-disabled="regForm.$invalid || (reg.favoriteExist != true)"
           ng-click="reg.submit()">Sign Up</button>
 
 </form>
 <div class="text-center" ng-if="reg.signup">
   Your information has been saved! You can see it on <a ui-sref="public.myinfo">this</a> page
 </div>
-
-<!-- first name, last name, email address, and phone number. It should also ask the user to specify the menu number that's their favorite dish. -->

@@ -30,7 +30,7 @@
     service.checkDishName = function (shortName) {
       // var url = "https://restaurant-server-grmnga.herokuapp.com/menu_items/" + shortName.trim() + ".json";
       // console.log("url: ", url);
-      return $http.get("https://restaurant-server-grmnga.herokuapp.com/menu_items/" + shortName.trim() + ".json")
+      return $http.get("https://restaurant-server-grmnga.herokuapp.com/menu_items/" + shortName.trim().toUpperCase() + ".json")
       .then(function (response) {
         return response.data;
       })
