@@ -15,7 +15,7 @@
           reg.favoriteExist = false;
         }
         else {
-          reg.favoriteExist = true;          
+          reg.favoriteExist = true;
           reg.favorite = response;
         }
       })
@@ -23,7 +23,7 @@
 
     reg.submit = function () {
       reg.checkDishName();
-      if (reg.favoriteExist = true) {
+      if (reg.favoriteExist == true) {
         console.log("favorite: ", reg.favorite);
         reg.account.favorite = reg.favorite;
         AccountDataService.addAccountData(reg.account);
